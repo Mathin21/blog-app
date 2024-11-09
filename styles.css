@@ -110,34 +110,73 @@ footer p {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
 }
 
 .content-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 1.5rem;
+    padding: 3rem;
 }
 
+/* Background color for each section */
+.travel-section { background-color: #51E2F5; }
+.personal-section { background-color: #A0D2EB; }
+.food-section { background-color: #f75990; }
+.news-section { background-color: #c2edda; }
+
 .content-section img {
-    width: 200px;
+    display: block;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    box-shadow: 0px 12px 24px 5px rgba(154, 49, 7, 0.8);
+}
+
+/* Text content styling */
+.text-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;     
+    gap: 0.5rem;           
+}
+
+.content-section h2 {
+    margin: 0;              
+    font-size: 1.8rem;
 }
 
 .content-section p {
-    max-width: 500px;
+    line-height: 1.6;
+    margin: 0;              
 }
 
-/* Alternating Left/Right Layout */
+/* Alternating Layouts */
 .content-section:nth-child(odd) {
     flex-direction: row;
 }
 
 .content-section:nth-child(even) {
     flex-direction: row-reverse;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-section:nth-child(even), .content-section:nth-child(odd) {
+        flex-direction: column;
+    }
+    .text-content {
+        max-width: 100%;
+    }
 }
 
 @keyframes backgroundRotate {
@@ -155,18 +194,5 @@ footer p {
     }
     100% {
         background-image: url('https://img.freepik.com/premium-photo/vintage-ink-pen-word-blog-concept-communication-social-media_1346034-14157.jpg?ga=GA1.1.1055122537.1730450527&semt=ais_hybrid');
-    }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .content-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .content-section img {
-        width: 100%;
-        max-width: 300px;
     }
 }

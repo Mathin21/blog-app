@@ -9,41 +9,49 @@
 <body>
     <nav>
         <a href="#"><img src="images\blog.png" style="width: 30px; height: 30px;">BLOG APP</a>
-        <a href="#">SIGN IN</a>
+        <a href="sign-in.html">SIGN IN</a>
     </nav>
     <main>
         <section class="hero-section">
             <h1>Welcome to our blog!</h1>
             <p>Discover the latest news, articles, and updates from our community.</p>
-            <button>CREATE YOUR BLOG</button>
+            <button type="button" id="create-blog">CREATE YOUR BLOG</button>
         </section>
         <div class="container">
             <!-- Section 1: Travel Blog -->
-            <div class="content-section">
+            <div class="content-section travel-section">
                 <img src="images/Image_1.jpg" alt="Travel blog">
-                <h2>Travel Blog</h2>
-                <p>Unlock the secrets to engaging blogging with essential tips that can transform your content creation. From understanding your audience to crafting compelling narratives, this travel blog will inspire you to share your adventures. Join us as we explore destinations that spark wanderlust and create captivating stories. #bloggingtips #contentcreator</p>
+                <div class="text-content">
+                    <h2>Travel Blog</h2>
+                    <p>Unlock the secrets to engaging blogging with essential tips that can transform your content creation. From understanding your audience to crafting compelling narratives, this travel blog will inspire you to share your adventures. Join us as we explore destinations that spark wanderlust and create captivating stories. #bloggingtips #contentcreator</p>
+                </div>
             </div>
         
             <!-- Section 2: Personal Blog -->
-            <div class="content-section">
+            <div class="content-section personal-section">
                 <img src="images/Image_2.png" alt="Personal blog">
-                <h2>Personal Blog</h2>
+                <div class="text-content">
+                    <h2>Personal Blog</h2>
                 <p>Delve into the depths of personal reflections and insights that shape our understanding of life. This personal blog invites you to share your experiences and connect with others through relatable stories. Discover the beauty of vulnerability and the power of shared narratives in building a community.</p>
+                </div>
             </div>
         
             <!-- Section 3: Food Blog -->
-            <div class="content-section">
+            <div class="content-section food-section">
                 <img src="images/Image_3.jpg" alt="Food blog">
-                <h2>Food Blog</h2>
-                <p>Embark on a culinary journey filled with delicious recipes and creative cooking ideas that tantalize your taste buds. This food blog showcases a variety of dishes, from quick weeknight meals to elaborate feasts. Join us in celebrating the joy of cooking and the flavors that bring people together around the table.</p>
+                <div class="text-content">
+                    <h2>Food Blog</h2>
+                    <p>Embark on a culinary journey filled with delicious recipes and creative cooking ideas that tantalize your taste buds. This food blog showcases a variety of dishes, from quick weeknight meals to elaborate feasts. Join us in celebrating the joy of cooking and the flavors that bring people together around the table.</p>
+                </div>
             </div>
         
             <!-- Section 4: News Blog -->
-            <div class="content-section">
+            <div class="content-section news-section">
                 <img src="images/Image_4.jpg" alt="News blog">
-                <h2>News Blog</h2>
-                <p>Stay informed with the latest updates and insightful analysis on current events shaping our world. This news blog provides in-depth coverage of important issues, featuring expert opinions and diverse perspectives. Engage with the content that matters and be a part of the conversation.</p>
+                <div class="text-content">
+                    <h2>News Blog</h2>
+                    <p>Stay informed with the latest updates and insightful analysis on current events shaping our world. This news blog provides in-depth coverage of important issues, featuring expert opinions and diverse perspectives. Engage with the content that matters and be a part of the conversation.</p>
+                </div>
             </div>
         </div>        
     </main>
@@ -55,5 +63,11 @@
         </div>
         <p>&copy; 2024 BlogApp. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById("create-blog").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "sign-up.html";
+        });
+    </script>
 </body>
 </html>
