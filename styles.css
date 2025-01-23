@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #2ba3bd;
+    color: #333;
+}
+
+main {
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+nav a:hover {
+    color: #5943b3;
+}
+
+footer {
+    display: flex;
+    padding: 1rem;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.hero-section {
+    padding: 2rem;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: "Lato", sans-serif;
+    color: #FFFFFF;
+    animation: backgroundRotate 30s infinite;
+}
+
+.hero-section h1 {
+    margin: 100px;
+    font-size: 2rem;
+}
+
+.hero-section p {
+    margin: 5px;
+    font-size: 1.1rem;
+}
+
+.hero-section button {
+    margin-top: 25px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+ 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 3rem;
+}
+
+/* Background color for each section */
+.travel-section { background-color: #51E2F5; }
+.personal-section { background-color: #A0D2EB; }
+.food-section { background-color: #f75990; }
+.news-section { background-color: #c2edda; }
+
+.content-section img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 12px 24px 5px rgba(154, 49, 7, 0.8);
+}
+
+/* Text content styling */
+.text-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;     
+    gap: 0.5rem;           
+}
+
+.content-section h2 {
+    margin: 0;              
+    font-size: 1.8rem;
+}
+
+.content-section p {
+    line-height: 1.6;
+    margin: 0;              
+}
+
+/* Alternating Layouts */
+.content-section:nth-child(odd) {
+    flex-direction: row;
+}
+
+.content-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-section:nth-child(even), .content-section:nth-child(odd) {
+        flex-direction: column;
+    }
+    .text-content {
+        max-width: 100%;
+    }
+}
+
+@keyframes backgroundRotate {
+    0% {
+        background-image: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+    25% {
+        background-image: url('https://img.freepik.com/free-photo/technology-communication-icons-symbols-concept_53876-120314.jpg?ga=GA1.1.1055122537.1730450527&semt=ais_siglip');
+    }
+    50% {
+        background-image: url('https://img.freepik.com/premium-photo/social-media-blog-concept-futuristic-icon-design-graphics-hand-with-smartphone_102583-6104.jpg?ga=GA1.1.1055122537.1730450527&semt=ais_siglip');
+    }
+    75% {
+        background-image: url('https://img.freepik.com/free-photo/gold-box-with-gold-coins-it-white-sheet-paper-table_1340-26291.jpg?ga=GA1.1.1055122537.1730450527&semt=ais_siglip');
+    }
+    100% {
+        background-image: url('https://img.freepik.com/premium-photo/vintage-ink-pen-word-blog-concept-communication-social-media_1346034-14157.jpg?ga=GA1.1.1055122537.1730450527&semt=ais_hybrid');
+    }
+}
